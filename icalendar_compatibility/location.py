@@ -204,7 +204,7 @@ class Location:
             GEO:37.386013;-122.082932
         """
         geo = self._event.get("GEO")
-        if geo is not None:
+        if isinstance(geo, vGeo):
             return geo
         match = GEO_MATCH.match(self.raw_text)
         if match:
