@@ -10,7 +10,7 @@ Compatibility Functions for ICalendar
    :alt: PyPI - Python Version
 
 .. image:: https://img.shields.io/pypi/dm/icalendar-compatibility.svg
-   :target: https://pypi.org/project/icalendar-compatibility/#files
+   :target: https://pypi.org/project/icalendar-compatibility/
    :alt: Downloads from PyPI
 
 .. image:: https://img.shields.io/github/actions/workflow/status/niccokunzmann/icalendar_compatibility/tests.yml?branch=main&label=main&logo=github

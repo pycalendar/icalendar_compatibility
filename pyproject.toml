@@ -30,14 +30,33 @@ dependencies = [
     "icalendar",
 ]
 
-[project.optional-dependencies]
+
+# Local development dependencies
+[dependency-groups]
 dev = [
+  {include-group = "test"},
+  {include-group = "docs"},
+  {include-group = "formatting"},
+  "tox",
+  "tox-uv",
+]
+
+test = [
+    "coverage",
+    "mypy>=1.0",
     "pytest",
 ]
+
+formatting = [
+    "ruff==0.15.2", # also update .pre-commit-config.yaml
+    "pre-commit",
+]
+
 docs = [
     "sphinx",
     "sphinx-rtd-theme",
     "sphinx-copybutton",
+    "sphinx-autobuild>=2021.3.14",
 ]
 
 [project.scripts]
