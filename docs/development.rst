@@ -1,7 +1,7 @@
 Notes for Developers
 ====================
 
-Repository: `niccokunzmann/icalendar_compatibility <https://github.com/niccokunzmann/icalendar_compatibility>`_
+Repository: `pycalendar/icalendar_compatibility <https://github.com/pycalendar/icalendar_compatibility>`_
 
 We use ``tox`` to run the tests.
 

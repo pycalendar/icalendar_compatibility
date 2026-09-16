@@ -8,7 +8,7 @@ RUFFPATH        = "$(realpath .venv/bin/ruff)"
 SPHINXAUTOBUILD = "$(realpath .venv/bin/sphinx-autobuild)"
 SPHINXBUILD     = "$(realpath .venv/bin/sphinx-build)"
 SOURCEDIR     = docs
-BUILDDIR      = build
+BUILDDIR      = ../.build
 ALLSPHINXOPTS   = -W -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 PYTHONVERSION   = >=3.10,<3.15
 DOCS_DIR        = ./docs/

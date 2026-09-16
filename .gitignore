@@ -104,4 +104,5 @@ ENV/
 .mypy_cache/
 
 # we
-html
+html.build/
+/.build

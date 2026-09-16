@@ -64,9 +64,9 @@ docs = [
 [tool.hatch.metadata.hooks.vcs.urls]
 #[project.urls]
 Homepage = "https://icalendar-compatibility.readthedocs.io/"
-Repository = "https://github.com/niccokunzmann/icalendar_compatibility/"
-source_archive = "https://github.com/niccokunzmann/icalendar_compatibility/archive/{commit_hash}.zip"
-Issues = "https://github.com/niccokunzmann/icalendar_compatibility/issues"
+Repository = "https://github.com/pycalendar/icalendar_compatibility/"
+source_archive = "https://github.com/pycalendar/icalendar_compatibility/archive/{commit_hash}.zip"
+Issues = "https://github.com/pycalendar/icalendar_compatibility/issues"
 Documentation = "https://icalendar-compatibility.readthedocs.io/"
 Changelog = "https://icalendar-compatibility.readthedocs.io/en/latest/changes.html"
 

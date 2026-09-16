@@ -13,8 +13,8 @@ Compatibility Functions for ICalendar
    :target: https://pypi.org/project/icalendar-compatibility/
    :alt: Downloads from PyPI
 
-.. image:: https://img.shields.io/github/actions/workflow/status/niccokunzmann/icalendar_compatibility/tests.yml?branch=main&label=main&logo=github
-    :target: https://github.com/niccokunzmann/icalendar_compatibility/actions/workflows/tests.yml?query=branch%3Amain
+.. image:: https://img.shields.io/github/actions/workflow/status/pycalendar/icalendar_compatibility/tests.yml?branch=main&label=main&logo=github
+    :target: https://github.com/pycalendar/icalendar_compatibility/actions/workflows/tests.yml?query=branch%3Amain
     :alt: GitHub Actions build status for main
 
 .. image:: https://readthedocs.org/projects/icalendar-compatibility/badge/?version=latest
@@ -40,7 +40,7 @@ Contributing
 ------------
 
 This packages is open-sources so you can use it and improve it for the calendars you use.
-If the calendar does not yield the right information, please `open an issue <https://github.com/niccokunzmann/icalendar_compatibility/issues>`_!
+If the calendar does not yield the right information, please `open an issue <https://github.com/pycalendar/icalendar_compatibility/issues>`_!
 
 Installation
 ------------
@@ -63,9 +63,9 @@ Related Work
 - Used by the `Open Web Calendar <https://open-web-calendar.quelltext.eu/>`_
 - This package is based on `icalendar`_.
 
-.. _`documentation`: https://icalendar-compatibility.readthedocs.io
-.. _`source code`: https://github.com/niccokunzmann/icalendar_compatibility
-.. _`change log`: https://icalendar-compatibility.readthedocs.io/en/latest/changes.html
+.. _`Documentation`: https://icalendar-compatibility.readthedocs.io
+.. _`Source Code`: https://github.com/pycalendar/icalendar_compatibility
+.. _`Change Log`: https://icalendar-compatibility.readthedocs.io/en/latest/changes.html
 
 License
 -------
