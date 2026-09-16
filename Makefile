@@ -99,4 +99,13 @@ linkcheckbroken: .venv  ## Run linkcheck and show only broken links
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 		"or in $(BUILDDIR)/linkcheck/ ."
+
+.PHONY: test
+test: .venv
+	@uv run tox -e py
+
+
+.PHONY: format
+format: .venv
+	@uv run tox -e black -- --check
 #/test

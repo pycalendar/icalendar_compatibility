@@ -3,29 +3,59 @@ Notes for Developers
 
 Repository: `pycalendar/icalendar_compatibility <https://github.com/pycalendar/icalendar_compatibility>`_
 
-We use ``tox`` to run the tests.
+Setup
+-----
+
+Use ``git``, ``make`` and ``uv`` to setup the repository for development.
 
 .. code-block:: shell
 
-    pip install tox
-    tox
+    git clone https://github.com/pycalendar/icalendar_compatibility.git
+    cd icalendar_compatibility
+    make init
 
-There are several environments to use.
+This installs ``pre-commit`` and the ``uv`` virtual environment.
+
+Testing
+-------
+
+Runs ``tox``/``pytest`` to run all the tests.
 
 .. code-block:: shell
 
-    tox -e py312  # run Python 3.12
-    tox -e ruff   # code quality
-    tox -e black  # code formatting
-    tox -e docs   # build the documentation to ./html
-    tox -e build  # build the package in ./dist
+    make test
+
+Formatting
+----------
+
+Formats the code with ``black``.
+
+.. code-block:: shell
+
+    make format
+
+Documentation
+-------------
+
+Build the documentation and edit it while it reloads:
+
+.. code-block:: shell
+
+    make livehtml
+
+Test building the documentation:
+
+.. code-block:: shell
+
+    make html
+    make linkcheck
 
 New Release
 -----------
 
 To create a new release:
 
-1. Edit the ``changes.rst`` file.
+1. Edit the :file:`changes.rst` file.
 2. Commit the changes::
 
       git add docs/changes.rst
