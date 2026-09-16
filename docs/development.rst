@@ -1,6 +1,8 @@
 Notes for Developers
 ====================
 
+Repository: `niccokunzmann/icalendar_compatibility <https://github.com/niccokunzmann/icalendar_compatibility>`_
+
 We use ``tox`` to run the tests.
 
 .. code-block:: shell
