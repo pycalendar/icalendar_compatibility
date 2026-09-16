@@ -25,17 +25,46 @@ jobs:
     name: ${{ matrix.config[1] }}
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python
-      uses: actions/setup-python@v5
+    - name: Install uv and Python ${{ matrix.config[0] }}
+      uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
       with:
+        enable-cache: true
+        # Install a specific version of uv.
+        version: "0.11.6"
         python-version: ${{ matrix.config[0] }}
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install tox
+      run: make dev
     - name: Test
       run: |
-        tox -e ${{ matrix.config[1] }}
+        uv run tox -e ${{ matrix.config[1] }}
+
+  docs:
+    name: Documentation
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.14']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          # Install a specific version of uv.
+          version: "0.9.3"
+
+      - name: Create Python virtual environment, install requirements
+        run: make .venv PYTHONVERSION=${{ matrix.python-version }}
+
+      - name: Build HTML documentation
+        run: make html PYTHONVERSION=${{ matrix.python-version }}
+
+      - name: Check for broken links
+        run: make linkcheckbroken PYTHONVERSION=${{ matrix.python-version }}
+
 
   deploy-tag-to-pypi:
     # only deploy on tags, see https://stackoverflow.com/a/58478262/1320237
