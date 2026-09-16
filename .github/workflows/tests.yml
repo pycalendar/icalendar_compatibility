@@ -125,6 +125,8 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-release
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Create GitHub release from tag
