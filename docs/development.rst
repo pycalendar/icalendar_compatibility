@@ -34,8 +34,8 @@ Formats the code with ``black``.
 
     make format
 
-Documentation
--------------
+Documentation Build
+-------------------
 
 Build the documentation and edit it while it reloads:
 
