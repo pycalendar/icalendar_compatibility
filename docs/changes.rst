@@ -4,7 +4,8 @@ Versions and Changes
 v0.1.5
 ------
 
-- Fix compatibility with icalendar 7 and ``vGeo`` by @dotlambda. `Issue 5 <https://github.com/pycalendar/icalendar_compatibility/issues/5>`_.
+- Fix compatibility with icalendar 7 and ``vGeo`` by @nightcityblade. `Issue 5 <https://github.com/pycalendar/icalendar_compatibility/issues/5>`_.
+- Update development documentation by @nightcityblade.
 
 v0.1.4
 ------
