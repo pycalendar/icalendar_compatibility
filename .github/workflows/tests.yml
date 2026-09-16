@@ -33,7 +33,7 @@ jobs:
         version: "0.11.6"
         python-version: ${{ matrix.config[0] }}
     - name: Install dependencies
-      run: make dev
+      run: make init
     - name: Test
       run: |
         uv run tox -e ${{ matrix.config[1] }}
